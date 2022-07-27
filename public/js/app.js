@@ -1,0 +1,4 @@
+// jquery functions
+$(function (e) {
+
+})

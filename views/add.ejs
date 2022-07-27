@@ -1,0 +1,52 @@
+<?- include('layouts/header.ejs') ?>
+<div id="topbar">
+  <a href="/"><img src="/images/logo.png" alt="School.Portal"></a>
+  <h1 id="headtitle">Add +</h1>
+</div>
+<div id="container">
+  <form
+    action="/user/post/add"
+    method="post"
+    enctype="application/x-www-form-urlencoded"
+  >
+      <div style="margin: 3px auto">
+          <label for="firstame">First Name:</label>
+          <input type="text" name="firstname" id="regnumber">
+      </div>       
+      <div style="margin: 3px auto">
+          <label for="lasttname">Last Name:</label>
+          <input type="text" name="lastname" id="fullname">
+      </div>
+      <div style="margin: 3px auto">
+          <label for="gender">Gender:</label>
+          <input list="browsers" name="browsers" id="status">
+      <datalist id="browsers">
+          <option value="Male">
+          <option value="Female">
+      </datalist>
+    </div>
+
+    <div style="margin: 3px auto">
+      <label for="email">Email Address:</label>
+      <input type="email" name="email" id="email" >
+    </div>
+    <div style="margin: 3px auto">
+      <label for="mobile">Telephone:</label>
+      <input type="tel" name="mobile" id="mobile" >
+    </div>
+    <label for="address">Address:</label>
+    <input type="text" name="address" id="address"><br>
+    <div style="margin: 3px auto">
+      <label for="about">About me:</label><br>
+      <textarea name="about" id="about" cols="50" rows="10"></textarea>
+    </div>
+
+    <div style="margin: 3px auto">
+      <button id="regbtn" type="submit">Add Now</button>
+    </div>
+  </form>
+</div>
+<div class="links">
+  <a href="/user/list">Go to List</a>
+</div>
+<?- include('layouts/footer.ejs') ?>

@@ -1,0 +1,19 @@
+<?- include('layouts/header.ejs') ?>
+<div id="topbar">
+  <a href="/"><img src="" alt="Portal"></a>
+  <h1 id="headtitle">Search the List of People</h1>
+</div>
+<div id="container">
+  <p>List of Students</p>
+  <ul>
+    <? user.forEach((user)=>{ ?>
+    <li style="background-color: #a26565; color: #ffffff; font-size: x-large">
+      <?= user.regnumber ?>\<?= user.fullname ?>\<?= user.email ?>\<?= user.mobile ?>\<?= user.password ?>
+    </li>
+    <? }) ?>
+  </ul>
+</div>
+<div class="links">
+  <a href="/add.html">Add +</a>
+</div>
+<?- include('layouts/footer.ejs') ?>
